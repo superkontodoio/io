@@ -28,6 +28,8 @@ public class CreateDentist {
     private AlertManager alertManager;
 
 
+    //// TODO: 11.04.16 repeat password
+
     @CommitAfter
     Object onSuccess() {
         session.persist(dentist);

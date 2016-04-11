@@ -2,7 +2,7 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
     <t:beaneditform submitlabel="Create Account" object="dentist"
-                    include="firstName,lastName,emailAddress,telephoneNumber,age"/>
+                    include="firstName,lastName,address,emailAddress,telephoneNumber,birthDate,password"/>
 
     <t:pageLink page="index">Back</t:pageLink>
 

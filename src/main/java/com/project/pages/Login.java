@@ -1,5 +1,8 @@
 package com.project.pages;
 
+import com.project.entities.Dentist;
+import com.project.pages.dentist.WelcomeDentist;
+import com.project.session.DentistVisit;
 import org.apache.tapestry5.alerts.AlertManager;
 import org.apache.tapestry5.annotations.InjectComponent;
 import org.apache.tapestry5.annotations.Property;
@@ -7,10 +10,18 @@ import org.apache.tapestry5.corelib.components.Form;
 import org.apache.tapestry5.corelib.components.PasswordField;
 import org.apache.tapestry5.corelib.components.TextField;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 import org.slf4j.Logger;
+
+import java.util.List;
 
 public class Login
 {
+  @Inject
+  private Session session;
+
   @Inject
   private Logger logger;
 
@@ -32,23 +43,37 @@ public class Login
   @Property
   private String password;
 
+  public List<Dentist> getDentists() {
+    Criteria criteria = session.createCriteria(Dentist.class);
+    criteria.add(Restrictions.eq("emailAddress", email));
+    criteria.add(Restrictions.eq("password", password));
+    return criteria.list();
+  }
 
 
+  //todo change
+  //// TODO: 11.04.16 onFail
   void onValidateFromLogin()
   {
-    if ( !email.equals("users@tapestry.apache.org"))
-      login.recordError(emailField, "Try with user: users@tapestry.apache.org");
+    if (login.getHasErrors()) {
+      return;
+    }
 
-    if ( !password.equals("Tapestry5"))
-      login.recordError(passwordField, "Try with password: Tapestry5");
   }
 
   Object onSuccessFromLogin()
   {
+    List<Dentist> loginResult = getDentists();
+    if (loginResult.size() != 1) {
+      logger.warn("Login error!");
+      alertManager.error("Email does not exist.");
+      return this.getClass();
+    }
     logger.info("Login successful!");
     alertManager.success("Welcome aboard!");
-
-    return Index.class;
+    Dentist dentist = loginResult.get(0);
+    new DentistVisit(dentist);
+    return WelcomeDentist.class;
   }
 
   void onFailureFromLogin()

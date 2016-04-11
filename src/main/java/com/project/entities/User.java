@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 
+import java.util.Date;
+
 @Entity
 public class User {
     @Id
@@ -28,10 +30,12 @@ public class User {
     @Validate("required,minLength=3,maxLength=15")
     public String emailAddress;
 
-    @Validate("required,minLength=3,maxLength=15")
-    public int age;
+    @Validate("required")
+    public Date birthDate;
 
-    //// TODO: 11.04.16 password
+    @Validate("required,minLength=3,maxLength=15")
+    public String password;
+
 }
 
 
