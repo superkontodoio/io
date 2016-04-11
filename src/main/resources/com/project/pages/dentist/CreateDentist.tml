@@ -1,0 +1,9 @@
+<html t:type="layout" title="Create New Dentist Account"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+    <t:beaneditform submitlabel="Create Account" object="dentist"
+                    include="firstName,lastName,emailAddress,telephoneNumber,age"/>
+
+    <t:pageLink page="index">Back</t:pageLink>
+
+</html>
