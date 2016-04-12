@@ -1,38 +1,23 @@
 package com.project.pages.dentist;
 
 import com.project.entities.Dentist;
-import com.project.session.DentistVisit;
+import com.project.base.BaseDentistSession;
+import org.apache.tapestry5.annotations.Log;
 import org.apache.tapestry5.annotations.Property;
-import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.hibernate.Session;
 
-public class BaseDentistPage {
-    @SessionState
-    private DentistVisit visit;
-    private boolean visitExists;
-
+public class BaseDentistPage extends BaseDentistSession {
 
     @Property
-    private Dentist dentist;
+    protected Dentist dentist;
 
     @Inject
-    private Session session;
+    protected Session session;
 
-    public DentistVisit getDentistVisit() {
-        return visit;
-    }
-
-    protected void setDentistVisit(DentistVisit visit) {
-        this.visit = visit;
-    }
-
-    public boolean isDentistVisitExists() {
-        return visitExists;
-    }
-
+    @Log
     void setupRender() {
-        if (!visitExists)return;
-         dentist = (Dentist) session.get(Dentist.class, visit.getUserId());
+        if (!isDentistVisitExists())return;
+         dentist = (Dentist) session.get(Dentist.class, getDentistVisit().getUserId());
     }
 }

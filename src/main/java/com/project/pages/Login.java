@@ -2,6 +2,7 @@ package com.project.pages;
 
 import com.project.entities.Dentist;
 import com.project.pages.dentist.WelcomeDentist;
+import com.project.base.BaseDentistSession;
 import com.project.session.DentistVisit;
 import org.apache.tapestry5.alerts.AlertManager;
 import org.apache.tapestry5.annotations.InjectComponent;
@@ -17,7 +18,7 @@ import org.slf4j.Logger;
 
 import java.util.List;
 
-public class Login
+public class Login extends BaseDentistSession
 {
   @Inject
   private Session session;
@@ -72,7 +73,7 @@ public class Login
     logger.info("Login successful!");
     alertManager.success("Welcome aboard!");
     Dentist dentist = loginResult.get(0);
-    new DentistVisit(dentist);
+    setDentistVisit(new DentistVisit(dentist));
     return WelcomeDentist.class;
   }
 

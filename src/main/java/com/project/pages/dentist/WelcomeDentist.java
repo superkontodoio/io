@@ -1,5 +1,5 @@
 package com.project.pages.dentist;
 
-public class WelcomeDentist extends BaseDentistPage{
+public class WelcomeDentist extends BaseDentistPage {
 
 }
