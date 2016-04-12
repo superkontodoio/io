@@ -5,41 +5,47 @@ import com.project.entities.Dentist;
 import java.io.Serializable;
 
 
-
+/**
+ * <h1>DentistVisit</h1>
+ * Klasa przechowująca dane użytkownika w sesji.
+ *
+ *
+ * @author  Malgorzata Fadziel
+ * @version 1.0
+ * @since   2016-04-13
+ */
 @SuppressWarnings("serial")
 public class DentistVisit implements Serializable {
 
+    /**
+     *  Id użytkownika.
+     */
     private Long userId = null;
+
+    /**
+     *  Adres email użytkownika.
+     */
     private String userEmail = null;
 
+    /**
+     * @param dentist Klasa użytkownika, którą będzie przechowywała sesja.
+     */
     public DentistVisit(Dentist dentist) {
         userId = dentist.id;
         userEmail = dentist.emailAddress;
 
-//        cacheUsefulStuff(dentist);
     }
-//
-//    public void noteChanges(User user) {
-//        if (user == null) {
-//            throw new IllegalArgumentException();
-//        }
-//        else if (user.getId().equals(myUserId)) {
-//            cacheUsefulStuff(user);
-//        }
-//    }
-//
-//    private void cacheUsefulStuff(User user) {
-//        userEmail = user.getLoginId();
-//        pageStyle = user.getPageStyle();
-//        dateInputPattern = user.getDateInputPattern();
-//        dateViewPattern = user.getDateViewPattern();
-//        dateListPattern = user.getDateListPattern();
-//    }
 
+    /**
+     * {@link DentistVisit#userId}
+     */
     public Long getUserId() {
         return userId;
     }
 
+    /**
+     * {@link DentistVisit#userEmail}
+     */
     public String getUserEmail() {
         return userEmail;
     }
