@@ -1,0 +1,6 @@
+<html t:type="DentistLayout" title="Edit profile"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+        <!--todo password hide-->
+        <t:beaneditform t:id="editForm" submitlabel="Edit Account" object="dentist"
+                        include="firstName,lastName,address,emailAddress,telephoneNumber,birthDate,password"/>
+</html>

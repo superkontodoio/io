@@ -1,4 +1,3 @@
-<html t:type="layout" title="Welcome page"
+<html t:type="DentistLayout" title="Welcome page"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
-    <t:pageLink page="dentist/CreateDentist">Log out</t:pageLink>
 </html>

@@ -1,0 +1,17 @@
+<html t:type="dentistLayout" title="Search"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <t:zone t:id="dentistsZone" id="dentistsZone">
+        <form t:type="form" zone="dentistsZone">
+            <t:textField t:id="searchValue"  t:type="TextField" />
+            <input type="submit" value="Filter" title="Filter" style="visibility:hidden"/>
+        </form>
+        <t:grid source="dentists" row="dentist"
+                include="firstName,lastName,birthDate,emailAddress,telephoneNumber,address" add="action">
+            <p:actioncell>
+                <t:pageLink page="dentist/reviewDentist" context="dentist.id" >See profile&nbsp;</t:pageLink>
+            </p:actioncell>
+        </t:grid>
+    </t:zone>
+</html>
