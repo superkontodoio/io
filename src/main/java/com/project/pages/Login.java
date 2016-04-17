@@ -67,7 +67,7 @@ public class Login extends BaseDentistSession
     List<Dentist> loginResult = getDentists();
     if (loginResult.size() != 1) {
       logger.warn("Login error!");
-      alertManager.error("Email does not exist.");
+      alertManager.error("Incorrect email or password.");
       return this.getClass();
     }
     logger.info("Login successful!");

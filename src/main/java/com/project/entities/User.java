@@ -25,7 +25,7 @@ public class User {
      * Id użytkownika.
      */
     @Id
-    @NonVisual
+//    @NonVisual
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
@@ -51,7 +51,7 @@ public class User {
     /**
      *  Adres email użytkownika.
      */
-    @Validate("required,minLength=3,maxLength=15")
+    @Validate("required,email")
     public String emailAddress;
 
     /**

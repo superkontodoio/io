@@ -1,6 +1,9 @@
 package com.project.pages.dentist;
 
+import com.project.entities.Dentist;
 import org.apache.tapestry5.annotations.InjectComponent;
+import org.apache.tapestry5.annotations.Persist;
+import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 
@@ -14,8 +17,6 @@ import org.apache.tapestry5.hibernate.annotations.CommitAfter;
  * @since   2016-04-13
  */
 public class EditDentist extends BaseDentistPage {
-
-
 
     /**
      *  Formularz do edycji danych.
