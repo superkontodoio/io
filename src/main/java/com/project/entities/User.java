@@ -18,6 +18,8 @@ import java.util.Date;
  * @author  Jakub Kwiatkowski
  * @version 1.0
  * @since   2016-04-13
+ *
+ * @tapestrydoc
  */
 @Entity
 public class User {

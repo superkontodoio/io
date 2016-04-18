@@ -26,7 +26,7 @@ public class DentistLayout
   private ComponentResources resources;
 
   /**
-   * The page title, for the <title> element and the <h1> element.
+   * The page title, for the element and the element.
    */
   @Property
   @Parameter(required = true, defaultPrefix = BindingConstants.LITERAL)

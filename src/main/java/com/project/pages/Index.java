@@ -16,7 +16,7 @@ import org.slf4j.Logger;
 import java.util.Date;
 
 /**
- * Start page of application denti.
+ * Start page of application.
  */
 public class Index
 {
