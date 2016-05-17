@@ -1,0 +1,15 @@
+<html t:type="layout" title="Create New Dentist Account"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter">
+    <!--todo password hide-->
+    <t:beaneditform submitlabel="Create Account" object="patient"
+                    reorder="firstName,lastName,emailAddress,telephoneNumber,birthDate"
+    exclude="id,appointments">
+    <p:password>
+        <t:label for="password"/>
+        <t:passwordfield t:id="password" value="dentist.password"/>
+    </p:password>
+    </t:beaneditform>
+    <t:pageLink page="index">Back</t:pageLink>
+
+</html>
