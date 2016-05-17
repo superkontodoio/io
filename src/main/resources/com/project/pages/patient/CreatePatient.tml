@@ -7,7 +7,7 @@
     exclude="id,appointments">
     <p:password>
         <t:label for="password"/>
-        <t:passwordfield t:id="password" value="dentist.password"/>
+        <t:passwordfield t:id="password" value="patient.password"/>
     </p:password>
     </t:beaneditform>
     <t:pageLink page="index">Back</t:pageLink>
