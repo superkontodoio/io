@@ -1,9 +1,9 @@
 <html t:type="layout" title="Denti"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
     <p>
-    	<t:pageLink page="dentist/CreateDentist">Create Dentist Account</t:pageLink>
+    	<t:pageLink page="dentist/CreateDentist" id="dentistLink">Create Dentist Account</t:pageLink>
     </p>
     <p>
-    	<t:pageLink page="patient/CreatePatient">Create Patient Account</t:pageLink>
+    	<t:pageLink page="patient/CreatePatient" id="patientLink">Create Patient Account</t:pageLink>
     </p>
 </html>
