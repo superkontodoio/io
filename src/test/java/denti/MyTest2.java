@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 /**
  *  <h1>Assert</h1>
- *  Test Cases 2
+ *  Test Cases - Strona 404, Login, ShowDentist, RewievDentist
  *
  *
  * @author  Przemys³aw Rydzyk
@@ -20,12 +20,18 @@ import org.testng.annotations.Test;
  */
 
 public class MyTest2 extends Assert{
+	/*
+	 * Stworzenie testera.
+	 */
 	public PageTester createNewTester() {
 	      String appPackage = "com.project";
 	      String appName = "";
 	      return new PageTester(appPackage, appName, "src/main/webapp");
 	  }
 	
+	/*
+	 * Test logowania - dane poprawne.
+	 */
 	@Test //(enabled = false)
 	public void testLoginForm(){
 		PageTester tester = createNewTester();
@@ -37,6 +43,9 @@ public class MyTest2 extends Assert{
         doc = tester.submitForm(form, fieldValues);
         assertTrue(doc.toString().contains("Witaj,"));
 	  }
+	/*
+	 * Test logowania - b³êdne has³o.
+	 */
 	@Test //(enabled = false)
 	public void testLoginFormBadCredentials(){
 		PageTester tester = createNewTester();
@@ -52,6 +61,9 @@ public class MyTest2 extends Assert{
         	System.out.println("Wyst¹pi³ b³¹d logowania!");
         }
 	  }
+	/*
+	 * Test strony 404 - treœæ podstawowa.
+	 */
 	@Test //(enabled = false)
 	public void testError404PageContent(){
 		PageTester tester = createNewTester();
@@ -60,12 +72,18 @@ public class MyTest2 extends Assert{
 		//System.out.println(doc.toString());
 		assertTrue(doc.getElementById("unfortunately").toString().contains("znaleziona"));
 	}
+	/*
+	 * Test strony 404 - treœæ dodatkowa.
+	 */
 	@Test //(enabled = false)
 	public void testError404PageContent2(){
 		PageTester tester = createNewTester();
 		Document doc = tester.renderPage("Error404");
 		assertTrue(doc.getElementById("options").toString().contains("strony"));
 	}
+	/*
+	 * Test strony 404 - link do powrotu na stronê g³ówn¹.
+	 */
 	@Test //(enabled = false)
 	public void testError404PageLink(){
 		PageTester tester = createNewTester();
@@ -74,13 +92,20 @@ public class MyTest2 extends Assert{
 		doc = tester.clickLink(link);
 		assertTrue(doc.toString().contains("Create"));
 	}
+	
+	/*
+	 * Test ShowDentist - wyœwietlania wszystkich dentystów.
+	 */
 	@Test //(enabled = false)
-	public void testDentistLinkOnShowDentistPage(){
+	public void testShowDentistPage(){
 		PageTester tester = createNewTester();
 		Document doc = tester.renderPage("dentist/ShowDentist");
 		//assertTrue(doc.getElementById("showDentistGrid").isEmpty());
 	}
 	
+	/*
+	 * Test ReviewDentist - wyœwietlania informacji o dentyœcie
+	 */
 	@Test //(enabled = false)
 	public void testReviewDentistDisplay(){
 		PageTester tester = createNewTester();
