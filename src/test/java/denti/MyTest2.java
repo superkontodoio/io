@@ -16,13 +16,13 @@ public class MyTest2 extends Assert{
 	      return new PageTester(appPackage, appName, "src/main/webapp");
 	  }
 	@Test (enabled = false)
-	public void test11(){
+	public void testPatientLinkOnShowDentistPage(){
 		PageTester tester = createNewTester();
 		Document doc = tester.renderPage("ShowDentist");
 		assertTrue(doc.getElementById("patientLink").toString().contains("patient/create"));
 	  }
 	@Test (enabled = false)
-	public void test12(){
+	public void testLoginForm(){
 		PageTester tester = createNewTester();
 		Document doc = tester.renderPage("Login");
 		Element form = doc.getElementById("login");
@@ -33,7 +33,7 @@ public class MyTest2 extends Assert{
         assertTrue(doc.toString().contains("Witaj,"));
 	  }
 	@Test (enabled = false)
-	public void test13(){
+	public void testError404PageContent(){
 		PageTester tester = createNewTester();
 		Document doc = tester.renderPage("Error404");
 		//System.out.println("//\n//\n//\n//");
@@ -41,13 +41,13 @@ public class MyTest2 extends Assert{
 		assertTrue(doc.getElementById("unfortunately").toString().contains("znaleziona"));
 	}
 	@Test (enabled = false)
-	public void test14(){
+	public void testError404PageContent2(){
 		PageTester tester = createNewTester();
 		Document doc = tester.renderPage("Error404");
 		assertTrue(doc.getElementById("options").toString().contains("strony"));
 	}
 	@Test (enabled = false)
-	public void test15(){
+	public void testError404PageLink(){
 		PageTester tester = createNewTester();
 		Document doc = tester.renderPage("Error404");
 		Element link = doc.getElementById("linkToMain");
@@ -55,19 +55,30 @@ public class MyTest2 extends Assert{
 		assertTrue(doc.toString().contains("Create"));
 	}
 	@Test (enabled = false)
-	public void test16(){
+	public void testDentistLinkOnShowDentistPage(){
 		PageTester tester = createNewTester();
 		Document doc = tester.renderPage("ShowDentist");
 		assertTrue(doc.getElementById("dentistLink").toString().contains("/dentist/create"));
 	}
 	
 	@Test //(enabled = false)
-	public void test17(){
+	public void testCreateDentistForm(){
 		PageTester tester = createNewTester();
-		Document doc = tester.renderPage("EditDentist");
-		System.out.println("//\n//\n//\n//");
+		Document doc = tester.renderPage("CreateDentist");
+		Element form = doc.getElementById("form");
+		Map<String, String > fieldValues = new HashMap<String, String>();
+        fieldValues.put("firstName", "Janusz");
+        fieldValues.put("lastName", "Testowy");
+        fieldValues.put("address", "Testowa 17/2 Poznañ");
+        fieldValues.put("emailAddress", "janusz@januszowo.eu");
+        fieldValues.put("telephoneNumber", "723 923 637");
+        fieldValues.put("birthDate", "11/1/1971");
+        fieldValues.put("password", "password");
+        System.out.println("//\n//\n//\n//");
 		System.out.println(doc.toString());
-	}
+        doc = tester.submitForm(form, fieldValues);
+        assertTrue(doc.toString().contains("Create"));
+	  }
 	
 	
 }
