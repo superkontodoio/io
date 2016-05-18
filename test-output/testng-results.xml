@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
@@ -36,6 +37,65 @@
           </reporter-output>
         </test-method> <!-- testReviewDentistDisplay -->
       </class> <!-- denti.MyTest2 -->
+=======
+<testng-results skipped="0" failed="0" total="10" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="4443" started-at="2016-05-18T15:25:17Z" finished-at="2016-05-18T15:25:21Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="4443" started-at="2016-05-18T15:25:17Z" finished-at="2016-05-18T15:25:21Z">
+      <class name="denti.TestCreateForm">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="setUp" is-config="true" duration-ms="629" started-at="2016-05-18T17:25:17Z" finished-at="2016-05-18T17:25:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testFormCorrectSubmit()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="testFormCorrectSubmit" duration-ms="3575" started-at="2016-05-18T17:25:17Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormCorrectSubmit -->
+        <test-method status="PASS" signature="testFormFieldAddress()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="testFormFieldAddress" duration-ms="15" started-at="2016-05-18T17:25:21Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormFieldAddress -->
+        <test-method status="PASS" signature="testFormFieldBirthDate()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="testFormFieldBirthDate" duration-ms="16" started-at="2016-05-18T17:25:21Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormFieldBirthDate -->
+        <test-method status="PASS" signature="testFormFieldEmailAddress()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="testFormFieldEmailAddress" duration-ms="0" started-at="2016-05-18T17:25:21Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormFieldEmailAddress -->
+        <test-method status="PASS" signature="testFormFieldFirstName()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="testFormFieldFirstName" duration-ms="16" started-at="2016-05-18T17:25:21Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormFieldFirstName -->
+        <test-method status="PASS" signature="testFormFieldLastName()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="testFormFieldLastName" duration-ms="0" started-at="2016-05-18T17:25:21Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormFieldLastName -->
+        <test-method status="PASS" signature="testFormFieldTelephoneNumber()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="testFormFieldTelephoneNumber" duration-ms="16" started-at="2016-05-18T17:25:21Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormFieldTelephoneNumber -->
+        <test-method status="PASS" signature="testFormFieldPassword()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="testFormFieldPassword" duration-ms="0" started-at="2016-05-18T17:25:21Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormFieldPassword -->
+        <test-method status="PASS" signature="testFormIncorrectSubmit()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="testFormIncorrectSubmit" duration-ms="19" started-at="2016-05-18T17:25:21Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormIncorrectSubmit -->
+        <test-method status="PASS" signature="testIsForm()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="testIsForm" duration-ms="16" started-at="2016-05-18T17:25:21Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsForm -->
+        <test-method status="PASS" signature="shutdown()[pri:0, instance:denti.TestCreateForm@3c0f93f1]" name="shutdown" is-config="true" duration-ms="125" started-at="2016-05-18T17:25:21Z" finished-at="2016-05-18T17:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutdown -->
+      </class> <!-- denti.TestCreateForm -->
+>>>>>>> origin/master
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
