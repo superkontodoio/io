@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7570" started-at="2016-05-18T10:31:45Z" finished-at="2016-05-18T10:31:52Z">
+  <suite name="Default suite" duration-ms="7002" started-at="2016-05-18T11:23:11Z" finished-at="2016-05-18T11:23:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7570" started-at="2016-05-18T10:31:45Z" finished-at="2016-05-18T10:31:52Z">
+    <test name="Default test" duration-ms="7002" started-at="2016-05-18T11:23:11Z" finished-at="2016-05-18T11:23:18Z">
       <class name="denti.MyTest2">
-        <test-method status="PASS" signature="test17()[pri:0, instance:denti.MyTest2@7791a895]" name="test17" duration-ms="7552" started-at="2016-05-18T12:31:45Z" finished-at="2016-05-18T12:31:52Z">
+        <test-method status="FAIL" signature="testCreateDentistForm()[pri:0, instance:denti.MyTest2@7791a895]" name="testCreateDentistForm" duration-ms="6983" started-at="2016-05-18T13:23:11Z" finished-at="2016-05-18T13:23:18Z">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError
+	at org.apache.tapestry5.test.PageTester.submitFormAndReturnResponse(PageTester.java:415)
+	at org.apache.tapestry5.test.PageTester.submitForm(PageTester.java:396)
+	at denti.MyTest2.testCreateDentistForm(MyTest2.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test17 -->
+        </test-method> <!-- testCreateDentistForm -->
       </class> <!-- denti.MyTest2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
