@@ -1,3 +1,4 @@
 <html t:type="DentistLayout" title="Welcome page"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+      <p id="powitanie"> Witaj, dentysto! </p>
 </html>

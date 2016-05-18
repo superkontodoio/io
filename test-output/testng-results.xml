@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="238" started-at="2016-05-18T08:28:17Z" finished-at="2016-05-18T08:28:17Z">
+  <suite name="Default suite" duration-ms="7570" started-at="2016-05-18T10:31:45Z" finished-at="2016-05-18T10:31:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="238" started-at="2016-05-18T08:28:17Z" finished-at="2016-05-18T08:28:17Z">
-      <class name="denti.MockTest">
-        <test-method status="PASS" signature="Test()[pri:0, instance:denti.MockTest@3b0143d3]" name="Test" duration-ms="205" started-at="2016-05-18T10:28:17Z" finished-at="2016-05-18T10:28:17Z">
+    <test name="Default test" duration-ms="7570" started-at="2016-05-18T10:31:45Z" finished-at="2016-05-18T10:31:52Z">
+      <class name="denti.MyTest2">
+        <test-method status="PASS" signature="test17()[pri:0, instance:denti.MyTest2@7791a895]" name="test17" duration-ms="7552" started-at="2016-05-18T12:31:45Z" finished-at="2016-05-18T12:31:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test -->
-      </class> <!-- denti.MockTest -->
+        </test-method> <!-- test17 -->
+      </class> <!-- denti.MyTest2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

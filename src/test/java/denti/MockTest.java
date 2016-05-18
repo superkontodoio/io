@@ -13,7 +13,7 @@ public class MockTest extends Assert{
 	public void Test(){
 		Patient testpatient = Mockito.mock(Patient.class); 
 		Mockito.when(testpatient.podajWiek()).thenReturn(15);
-		testpatient.podajWiek();
+		System.out.println(testpatient.podajWiek());
 		Mockito.verify(testpatient).podajWiek();
 	}
 }
