@@ -7,6 +7,15 @@ import org.mockito.Mockito;
 
 import org.testng.Assert;
 
+/**
+ *  Tworzy obiekt testowy - mock
+ *
+ *
+ * @author  Przemys³aw Rydzyk
+ * @version 1.0
+ * @since   2016-05-18
+ */
+
 public class MockTest extends Assert{
 	
 	@Test

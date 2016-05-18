@@ -2,5 +2,6 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
     <!--todo hide password and reorder-->
+    <h1 id="dane_dentysty">Informacje o dentyscie</h1>
     <t:beandisplay object="reviewDentist"/>
 </html>

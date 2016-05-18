@@ -7,7 +7,7 @@
             <t:textField t:id="searchValue"  t:type="TextField" />
             <input type="submit" value="Filter" title="Filter" style="visibility:hidden"/>
         </form>
-        <t:grid source="dentists" row="dentist"
+        <t:grid id="showdentistgrid" source="dentists" row="dentist"
                 include="firstName,lastName,birthDate,emailAddress,telephoneNumber,address" add="action">
             <p:actioncell>
                 <t:pageLink page="dentist/reviewDentist" context="dentist.id" >See profile&nbsp;</t:pageLink>
