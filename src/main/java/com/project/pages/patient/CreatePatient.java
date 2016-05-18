@@ -43,5 +43,10 @@ public class CreatePatient {
         logger.warn("Register error!");
         alertManager.error("I'm sorry but I can't log you in!");
     }
+    
+    void onSubmit()
+    {
+    	return;
+    }
 
 }

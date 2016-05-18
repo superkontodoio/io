@@ -35,12 +35,12 @@
 
     <!-- Filter configuration -->
     <filter>
-        <filter-name>app</filter-name>
+        <filter-name>denti</filter-name>
         <filter-class>org.apache.tapestry5.TapestryFilter</filter-class>
     </filter>
 
     <filter-mapping>
-        <filter-name>app</filter-name>
+        <filter-name>denti</filter-name>
         <url-pattern>/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>ERROR</dispatcher>
