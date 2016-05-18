@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="238" started-at="2016-05-18T08:28:17Z" finished-at="2016-05-18T08:28:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="238" started-at="2016-05-18T08:28:17Z" finished-at="2016-05-18T08:28:17Z">
+      <class name="denti.MockTest">
+        <test-method status="PASS" signature="Test()[pri:0, instance:denti.MockTest@3b0143d3]" name="Test" duration-ms="205" started-at="2016-05-18T10:28:17Z" finished-at="2016-05-18T10:28:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+      </class> <!-- denti.MockTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
