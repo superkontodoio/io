@@ -1,6 +1,5 @@
 package com.project.entities;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -21,7 +20,6 @@ public class Patient extends User {
     /**
      * Lista umówionych spotkañ
      */
-    private ArrayList appointments;
     
     public String przedstawSie(){
     	return "Czeœæ! Jestem " + this.firstName;
