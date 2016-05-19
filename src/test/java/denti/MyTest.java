@@ -10,6 +10,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+/**
+ *  <h1>Assert</h1>
+ *  Test Cases - Testing Components of Index Page
+ *
+ *
+ * @author  Ma³gorzata F¹dziel
+ * @version 1.0
+ * @since   2016-05-18
+ */
+
 public class MyTest {
 
 	private PageTester tester;

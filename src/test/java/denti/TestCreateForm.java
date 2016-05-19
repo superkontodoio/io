@@ -14,6 +14,15 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+/**
+ *  <h1>Assert</h1>
+ *  Test Cases - Testing form component (display and submission)
+ *
+ * @author  Ma³gorzata F¹dziel
+ * @version 1.0
+ * @since   2016-05-18
+ */
+
 public class TestCreateForm {
 	private PageTester tester;
 
