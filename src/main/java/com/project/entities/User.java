@@ -19,7 +19,6 @@ import java.util.Date;
  * @version 1.0
  * @since   2016-04-13
  *
- * @tapestrydoc
  */
 @Entity
 public class User {
